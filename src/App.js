@@ -33,7 +33,7 @@ export default function App() {
           alert(`Please enter more correct query`);
           return;
         }
-        setImages([...data.hits]);
+        setImages([...images, ...data.hits]);
         setCurrentPage(currentPage + 1);
         setTotal(data.total);
         window.scrollTo({
